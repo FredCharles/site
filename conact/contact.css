@@ -11,7 +11,7 @@
 body 
 {
     min-height: 100vh;
-    background:  linear-gradient(rgba(0, 0, 0, 0.445),#222020), url('images/vue-aerienne-equipe-commerciale_53876-124515.jpg') no-repeat;
+    background:  linear-gradient(rgba(0, 0, 0, 0.445),#222020), url('contact-us.jpg') no-repeat;
     backdrop-filter: blur(.8px);
     background-size: cover;
     display: flex;
