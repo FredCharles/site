@@ -7,17 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À Propos Vision Alarme</title>
     <link rel="stylesheet" href="Style.css">
-    
+        <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    
+
 </head>
 
 <body>
+    
+            <!-- MENU NAVBAR START -->
+            <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+
+            <a class="navbar-brand me-auto" href="#">Logo</a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                            <a class="nav-link mx-lg-2 active" aria-current="page" href="VisionAlarme.html">Accueil</a>
+                            </li>
+
+                            <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="VisionAlarme.html#services-1">Services</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="VisionAlarme.html#service">Nos maîtrises</a>
+                                </li>
+
+                            <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="About.php">À Propos</a>
+                            </li>
+
+                            <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="About.php#Contact">Contactez-Nous</a>
+                            </li>
+
+                        </ul>
+                    </div>
+            </div>
+            <a href="#Contact" class="devis-button">Demander un dévis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </div>
+    </nav>
+        <!-- MENU NAVBAR END -->
 
 
     <div class="bloc">
@@ -30,7 +75,7 @@
 
 
     <section id="about">
-        <div class="discibe">
+        <div class="discribe">
             <h3>Notre <span>Identité</span></h3>
             <hr>
             <p>
@@ -45,6 +90,7 @@
             </p>
         </div>
 </section>
+
 
 
 <div class="section-about">
@@ -156,6 +202,7 @@
     </div>
 
 
+
     <!-- FOOTER START-->
     <footer class="footer-distributed">
 
@@ -165,7 +212,7 @@
             <p class="footer-links">
                 <a href="VisionAlarme.html">Accueil</a>
                 |
-                <a href="#">À Propos</a>
+                <a href="About.php">À Propos</a>
                 |
                 <a href="contact.php">Contact</a>
                 |
@@ -194,13 +241,7 @@
                 <span>À Propos Vision Alarme</span>
                 <strong>Vision Alarme</strong>, fondée en 2022, est une entreprise spécialisée dans la fourniture de solutions de sécurité fiables et innovantes, assurant la protection des biens pour une tranquillité d'esprit absolue.
             </p>
-            <div class="footer-icons">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-youtube"></i></a>
-            </div>
+        
         </div>
     </footer>
         <!-- FOOTER END-->
@@ -216,7 +257,12 @@
             // Réinitialise le formulaire
             document.getElementById('contactForm').reset();
         });
-    </script>
+        </script>
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+</script>
 
 
 </body>

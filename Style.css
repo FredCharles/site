@@ -11,14 +11,106 @@ span
 body 
 {
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
     background:  linear-gradient(rgb(102, 102, 102),#bba5a570);
+    
 }
+
+
+/* NAVBAR START */
+.navbar
+{
+    background: #746b6b;
+    height: 80px;
+    margin: 1px;
+    border-radius: 8px;
+    padding: 0.5rem;
+    
+}
+.navbar-brand
+{
+    font-weight: 500;
+    margin-left: 10%;
+    color: #009970;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+.devis-button
+{
+    background: #009970;
+    color: #fff;
+    margin-right: 10%;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.devis-button:hover
+{
+    background: #00b383;
+}
+
+.navbar-toggler
+{
+    border: hidden;
+    font-size: 1.25rem;
+    margin-left: 20px;
+}
+
+.navbar-toggler:focus, .btn-close:focus
+{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-item .nav-link
+{
+    font-size: 15px;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active
+{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+@media screen and (min-width:991px)
+{
+
+    .nav-link::before
+    {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background: #009970;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+        color: #000;
+    }
+
+    .nav-link:hover::before, .nav-link:active::before
+    {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+/* NAVBAR END */
 
 .banner 
 {
     background: linear-gradient(rgba(0,0,0,0.3),#222020), url(images/home.jpg) no-repeat;
 	height: 100vh;
+    margin-bottom: 50px;
 	background-size: cover;
 	background-position: center center;
 	display: grid;
@@ -96,13 +188,23 @@ body
 /* SECTION SERVICES 1 START */
 #services-1
 {
-    
-    padding: 0;
-    justify-content: center;
-    place-items: center;
-    width: 100%;
-    display: grid;
+    height: 100%;
+
 }
+
+.row-1
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .row-1 h5
 {
     position: relative;
@@ -110,39 +212,24 @@ body
     font-size: 28px;
     color: #0f0d0d;
     margin-top: 80px;
-    margin-bottom: 60px;
     font-weight: 500;
     letter-spacing: 3px;
     text-align: center;
     line-height: 30px;
 }
 
-.row-1 h5::after
-{
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -25px;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background: #00e1ff;
-}
-
 .service-container-1
 {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    width: 60%;
+    width: 80%;
 }
 
 .service-container-1 p
 {
     margin-top: 10px;
-    margin-bottom: 50px;
     text-align:justify;
-    line-height: 25px;
+    line-height: 20px;
     color: #000;
 }
 /* SECTION SERVICES 1 END */
@@ -151,7 +238,7 @@ body
 
 .wrapper-2
 {
-    background: linear-gradient(rgb(29, 16, 16),#222020b9), url(images/standard-quality-control-concept-m.jpg) no-repeat;
+    background: linear-gradient(rgb(44, 38, 38),#222020b9), url(images/standard-quality-control-concept-m.jpg) no-repeat;
     backdrop-filter: blur(8px);
     background-size: cover;
     background-position: center center;
@@ -164,6 +251,7 @@ body
     align-items: center;
     flex-wrap: wrap;
     padding-top: 70px;
+    padding: 80px;
     clip-path: polygon(50% 10%, 52% 0, 100% 0, 100% 100%, 0 100%, 0 0, 48% 0);
 }
 
@@ -221,6 +309,7 @@ body
     width: 400px;
     padding: 20px;
     margin: 20px;
+    color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,7 +319,7 @@ body
     border-radius: 0 45px;
     margin-bottom: 20px;
     /* From https://css.glass */
-    background: rgba(5, 166, 196, 0.09);
+    background: rgba(5, 167, 196, 0.342);
 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3px);
@@ -453,13 +542,10 @@ p
 {
     position: relative;
     text-align: center;
-
-    padding: 10px;
-    
+    padding: 10px;  
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .div-about h4
@@ -696,65 +782,56 @@ p
 
 
 /* SLIDE LOGO STAR */
-@keyframes slide 
-{
+@keyframes slide {
     from {
-    transform: translateX(0);
+      transform: translateX(0);
     }
     to {
-    transform: translateX(-100%);
+      transform: translateX(-100%);
     }
-}
-
-.logos 
-{
+  }
+  
+  .logos {
     overflow: hidden;
-    background: rgba(160, 160, 160, 0.315);
+    padding: 60px 0;
+    background: white;
     white-space: nowrap;
     position: relative;
-}
-
-.logos:before,
-.logos:after 
-{
+  }
+  
+  .logos:before,
+  .logos:after {
     position: absolute;
     top: 0;
     width: 250px;
     height: 100%;
     content: "";
     z-index: 2;
-}
-
-.logos:before
-{
+  }
+  
+  .logos:before {
     left: 0;
     background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
-
-.logos:after 
-{
+  }
+  
+  .logos:after {
     right: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-}
-
-.logos:hover .logos-slide 
-{
+  }
+  
+  .logos:hover .logos-slide {
     animation-play-state: paused;
-
-}
-
-.logos-slide 
-{
+  }
+  
+  .logos-slide {
     display: inline-block;
     animation: 35s slide infinite linear;
-}
-
-.logos-slide img {
+  }
+  
+  .logos-slide img {
     height: 50px;
     margin: 0 40px;
-    size: 20px;
-    padding: 40px;
-}
+  }
 /* SLIDE LOGO END */
 
 /* LES BOUTONS */
@@ -820,7 +897,10 @@ p
     background-color: #ffffff1f;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    margin-top: 65px;
+    margin-bottom: 65px;
 }
+
 
 .Contact-Title {
     text-align: center;
@@ -997,7 +1077,7 @@ footer {
     text-align: left;
     font: bold 16px sans-serif;
     padding: 50px 50px 60px 50px;
-    margin-top: 10px;
+
 }
 
 .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {

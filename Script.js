@@ -10,12 +10,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêche l'envoi réel du formulaire
-
-    // Affiche le message de confirmation
-    document.getElementById('confirmationMessage').style.display = 'block';
-
-    // Réinitialise le formulaire
-    document.getElementById('contactForm').reset();
-});
