@@ -1,0 +1,273 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #ccc;
+}
+
+#carrière
+{
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+    place-items: center;
+    width: 100%;
+    display: grid;
+    background:  linear-gradient(rgb(109, 109, 109),#bba5a570);
+}
+
+.row-job
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+.job-listing
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.row h1
+{
+    position: relative;
+    text-transform: uppercase;
+    color: #0f0d0d;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.row h1::after
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #00e1ff;
+}
+
+.job
+{
+        /* From https://css.glass */
+    background: rgba(5, 166, 196, 0.09);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(5, 166, 196, 0.36);
+    width: 400px;
+    margin: 20px;
+    border-radius: 10px 0;
+}
+
+.job-image
+{
+    height: 270px;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+
+.img-1
+{
+    background: url('images/technicien.jpg');
+    background-size: cover;
+}
+
+.img-2
+{
+    background: url('images/Responsable\ Sécurité.jpg');
+    background-size: cover;
+}
+
+.img-3
+{
+    background: url('images/commercial.jpg');
+    background-size: cover;
+}
+
+.img-4
+{
+    background: url('images/sécretaire.jpg');
+    background-size: cover;
+}
+
+.job h2
+{
+    padding: 10px;
+    font-size: 25px;
+}
+
+.job:hover 
+{
+    color: #fff;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all .5s ease;
+}
+
+.job a
+{
+    border: 1px solid rgba(5, 196, 148, 0.658);
+    background: #000000;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    border-radius: 8px;
+}
+
+.job a:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all .5s ease;
+    background: #ffffff;
+    font-weight: 500;
+    color: #000;
+}
+
+
+
+
+
+.container
+{
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(rgba(0,0,0,0.3),#222020), url(images/entreprise-concept-entrevue-emploi_1421-77.jpg) no-repeat;
+    backdrop-filter: blur(10px);
+    background-size: cover;
+    background-position: center;
+}
+
+.apply_box
+{
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(160, 153, 153, 0.705);
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+    border-radius: 10px;
+}
+
+.apply_box h1
+{
+    font-size: 20px;
+}
+
+
+
+.form_container
+{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form_control
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.form_control_resume
+{
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    height: 110px;
+    border-radius: 5px;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+}
+
+label
+{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+input, select
+{
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+textarea
+{
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    height: 120px;
+}
+
+input:focus
+{
+    outline-color: rgb(124, 245, 245);
+}
+
+.button_container
+{
+    display: flex;
+
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+button
+{
+    background-color: rgb(27, 24, 24);
+    border: transparent solid 2px;
+    padding: 15px 40px;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+    font-size: 15px;
+}
+button:hover
+{
+    background-color: #ccc;
+    border: 2px solid rgb(4, 133, 165);
+    color: black;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.textarea_control
+{
+    grid-column: 1 / span 2;
+}
+.textarea_control textarea 
+{
+    width: 100%;
+}
+
+@media (max-width: 460px) 
+{
+    .textarea_control 
+    {
+    grid-column: 1 / span 1;
+    }
+} ;

@@ -48,6 +48,10 @@
                             </li>
 
                             <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#">Carrière</a>
+                            </li>
+
+                            <li class="nav-item">
                             <a class="nav-link mx-lg-2" href="About.php#Contact">Contactez-Nous</a>
                             </li>
 
@@ -187,6 +191,7 @@
                     <form class="contact" action="" method="post">
                         <input type="text" name="name" class="text-box" placeholder="Votre Nom / Prénom" required>
                         <input type="email" name="email" class="text-box" placeholder="Votre Email" required>
+                        
                         <textarea name="message" rows="5" placeholder="Veuillez saisir votre Message" required></textarea>
                         <input type="submit" name="submit" class="send-button" value="Envoyer">
                     </form>

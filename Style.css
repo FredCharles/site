@@ -4,14 +4,11 @@
     margin: 0;
     padding: 0;
 }
-span
-{
-    color: #29d9d5;
-}
+
 body 
 {
     box-sizing: border-box;
-    background:  linear-gradient(rgb(102, 102, 102),#bba5a570);
+    
     
 }
 
@@ -79,6 +76,7 @@ body
 }
 
 
+
 @media screen and (min-width:991px)
 {
 
@@ -124,7 +122,6 @@ body
 .content h2
 {
 	margin: 0;
-	font-size: 65px;
 	color: #fff;
     margin-bottom: 30px;
 }
@@ -148,14 +145,12 @@ body
     transform: translateX(0);
 }
 
-
 .banner p
 {
 	margin: 0;
 	color: #fff;
     line-height: 2rem;
     margin-bottom: 30px;
-    font-size: 18px;
     text-align: center;
 }
 .banner a
@@ -189,6 +184,8 @@ body
 #services-1
 {
     height: 100%;
+    background: #ffffff;
+    
 
 }
 
@@ -209,10 +206,8 @@ body
 {
     position: relative;
     text-transform: uppercase;
-    font-size: 28px;
     color: #0f0d0d;
     margin-top: 80px;
-    font-weight: 500;
     letter-spacing: 3px;
     text-align: center;
     line-height: 30px;
@@ -225,12 +220,13 @@ body
     width: 80%;
 }
 
-.service-container-1 p
+.row-1 p
 {
     margin-top: 10px;
     text-align:justify;
     line-height: 20px;
     color: #000;
+    padding: 0 100px;
 }
 /* SECTION SERVICES 1 END */
 
@@ -285,7 +281,6 @@ body
 .top_div h3
 {
     position: relative;
-    font-size: 30px;
     font-weight: 300;
     text-transform: uppercase;
     margin: 30px;
@@ -340,8 +335,8 @@ body
 .contenu img
 {
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     padding: 20px;
     border-radius: 35%;
     background: rgba(255, 255, 255, 0.685);
@@ -356,7 +351,6 @@ body
 
 .contenu h2
 {
-    font-size: 18px;
     margin: 20px;
     text-transform: uppercase;
 
@@ -364,9 +358,7 @@ body
 
 .contenu p
 {
-    font-size: 14px;
     line-height: 1.8;
-    
     margin: 20px;
 }
 /* SECTION SERVICES 2 END */
@@ -389,7 +381,7 @@ body
     flex-wrap: wrap;
 }
 
-.row
+.row-service
 {
     display: flex;
     flex-wrap: wrap;
@@ -397,11 +389,10 @@ body
     padding: 10px;
 }
 
-.row h1
+.row-service h1
 {
     position: relative;
     text-transform: uppercase;
-    font-size: 28px;
     color: #0f0d0d;
     margin-top: 80px;
     margin-bottom: 60px;
@@ -411,7 +402,7 @@ body
     line-height: 30px;
 }
 
-.row h1::after
+.row-service h1::after
 {
     content: '';
     position: absolute;
@@ -430,7 +421,7 @@ body
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(5, 166, 196, 0.36);
+    /*border: 1px solid rgba(5, 166, 196, 0.36);*/
     width: 300px;
     margin: 20px;
     padding: 20px;
@@ -551,7 +542,6 @@ p
 .div-about h4
 {
     font-weight: 300;
-    font-size: 50px;
     color: #fff;
     letter-spacing: 15px;
     margin-bottom: 20px;
@@ -560,7 +550,6 @@ p
 .div-about h2
 {
     font-weight: 500;
-    font-size: 80px;
     color: #fff;
     letter-spacing: 10px;
 }
@@ -587,7 +576,6 @@ p
     color: #000;
     text-transform: uppercase;
     text-align: center;
-    font-size: 45px;
     letter-spacing: 10px;
     padding: 20px 0;
 }
@@ -605,7 +593,6 @@ p
 {
     padding: 20px;
     text-align: justify;
-    font-size: 17px;
     line-height: 1.5;
     color: #000;
 }
@@ -672,14 +659,12 @@ p
 .content-section .content-text h3
 {
     margin-top: 20px;
-    font-size: 25px;
     color: #000;
 }
 
 .content-section .content-text p
 {
     margin-top: 20px;
-    font-size: 17px;
     line-height: 1.5;
     color: #000;
 }
@@ -723,10 +708,6 @@ p
         font-size: 19px;
     }
 
-    .title-1 h3
-    {
-        font-size: 12px;
-    }
 }
 /* ABOUT END */
 
@@ -741,8 +722,6 @@ p
     text-align: center;
     line-height: 30px;
     letter-spacing: 2px;
-    font-size: 25px;
-    font-size: 25px;
 }
 
 .title-1 h3::after
@@ -784,54 +763,54 @@ p
 /* SLIDE LOGO STAR */
 @keyframes slide {
     from {
-      transform: translateX(0);
+    transform: translateX(0);
     }
     to {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
     }
-  }
-  
-  .logos {
+}
+
+.logos {
     overflow: hidden;
     padding: 60px 0;
     background: white;
     white-space: nowrap;
     position: relative;
-  }
-  
-  .logos:before,
-  .logos:after {
+}
+
+.logos:before,
+.logos:after {
     position: absolute;
     top: 0;
     width: 250px;
     height: 100%;
     content: "";
     z-index: 2;
-  }
-  
-  .logos:before {
+}
+
+.logos:before {
     left: 0;
     background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-  }
-  
-  .logos:after {
+}
+
+.logos:after {
     right: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-  }
-  
-  .logos:hover .logos-slide {
+}
+
+.logos:hover .logos-slide {
     animation-play-state: paused;
-  }
-  
-  .logos-slide {
+}
+
+.logos-slide {
     display: inline-block;
     animation: 35s slide infinite linear;
-  }
-  
-  .logos-slide img {
+}
+
+.logos-slide img {
     height: 50px;
     margin: 0 40px;
-  }
+}
 /* SLIDE LOGO END */
 
 /* LES BOUTONS */
@@ -909,7 +888,6 @@ p
 
 .Contact-Title h2 {
     margin-bottom: 35px;
-    font-size: 24px;
     color: #ffffff;
     text-transform: uppercase;
 }
@@ -927,7 +905,6 @@ p
 }
 
 .Contact-Title h6 {
-    font-size: 16px;
     color: #ffffff;
     margin-bottom: 30px;
 }
