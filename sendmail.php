@@ -15,6 +15,15 @@ if (isset ($_POST['submit']))
     $email = $_POST['email'];
     $message = $_POST['message'];
 
+    $last_name = $_POST['last_name'];
+    $job_role = $_POST['job_role'];
+
+    $upload = $_FILES['upload']['tmp_name'];
+    $uploadName = $_FILES['upload']['name'];
+    
+    
+    
+
     try 
     { 
         $mail->isSMTP();
@@ -30,9 +39,18 @@ if (isset ($_POST['submit']))
 
         $mail->isHTML(true);
         $mail->Subject = 'Message Received (Contact Page)';
-        $mail->Body = "<h3>Name : $name <br>Email : $email <br>Message : $message</h3>";
+        $mail->Body = "<h3>Name : $name <br>last_name : $last_name <br>Email : $email <br>Message : $message : <br>job_role : $job_role <br>upload : $upload</h3>";
+
+        if (is_uploaded_file($upload)) {
+            $mail->addAttachment($upload, $uploadName);
+        }
+
 
         $mail->send();
+
+         // Set confirmation message in session
+        $_SESSION['confirmation'] = 'Votre CV a bien été envoyé. Merci de Postulé à notre offre.';
+
         $alert = '<div class="alert-success">
                     <span>Message envoyé! Merci de nous contacter.</span>
                     </div>';

@@ -13,7 +13,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     
-
 </head>
 
 <body>
@@ -48,7 +47,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2" href="#">Carrière</a>
+                                <a class="nav-link mx-lg-2" href="carrière.php">Carrière</a>
                             </li>
 
                             <li class="nav-item">
